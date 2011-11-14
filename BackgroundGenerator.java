@@ -478,7 +478,6 @@ public class BackgroundGenerator {
 		
 		// first argument = location: local drive folder, or RSS feed from Picasa
 		// second argument = max number of pictures to use (counting from the start of the listing
-		
 		//generateWallpaper(args[0], Integer.parseInt(args[1]));
 
 		// jhead for rotation fixing: http://www.sentex.net/~mwandel/jhead/usage.html
@@ -488,22 +487,7 @@ public class BackgroundGenerator {
 		// (for file name renaming, this came in handy (rename all files to YYMMDDHHMMSS.jpg format: exiftool '-FileName<CreateDate' -d %Y%m%d_%H%M%S%%-c.%%e directory )
 		
 		// example: local folder, all images:
-		//generateWallpaper("/Users/Jens/Desktop/SweTripPhotobook", Integer.MAX_VALUE);
-		//generateWallpaper("/Users/Jens/Desktop/SweTripPhotobook/RotateFix/RenameFix", 24);
 		generateWallpaper("/Users/Jens/Desktop/untitled folder", 24);
-		
-		// example: Picasa feed, only the first 25 images
-		//generateWallpaper("https://picasaweb.google.com/data/feed/base/user/109480864553550649279/albumid/5627802411110501825?alt=rss&kind=photo&authkey=Gv1sRgCOCc3_fcz9iBeA&hl=en_US", 25);
-
-		// example: Picasa feed, ALL images (will take significant time to generate):
-		//generateWallpaper("https://picasaweb.google.com/data/feed/base/user/109480864553550649279/albumid/5627802411110501825?alt=rss&kind=photo&authkey=Gv1sRgCOCc3_fcz9iBeA&hl=en_US", Integer.MAX_VALUE);
-
-		// example: Picasa featured photos, first 150
-		//generateWallpaper("https://picasaweb.google.com/data/feed/base/featured?alt=rss&kind=photo&access=public&slabel=featured&hl=en_US", 100);
-		//generateWallpaper("https://picasaweb.google.com/data/feed/base/featured?alt=rss&kind=photo&access=public&slabel=featured&hl=en_US", Integer.MAX_VALUE);
-		
-		// Jan's Picasa:
-		//generateWallpaper("https://picasaweb.google.com/data/feed/base/user/jan.kronquist/albumid/5646728005640388753?alt=rss&kind=photo&authkey=Gv1sRgCN2MmMTXrqHGJg&hl=en_US", 24);
 		
 		Date end = new Date();
 		System.out.println("Done! Took " + String.format("%1.1f", 0.001*(end.getTime()-start.getTime())) + " seconds. Output here: " + OUTPUT_FILE);
